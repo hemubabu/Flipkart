@@ -4,7 +4,7 @@ public class NewJavaFile {
 	
 	public static void main(String[] args) {
 
-		System.out.println("New class file");
+		System.out.println("New class file from test");
 	}
 
 }
