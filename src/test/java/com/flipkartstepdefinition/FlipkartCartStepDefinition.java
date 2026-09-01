@@ -4,7 +4,7 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+import org.junit.Assert;
 
 import com.baseclass.CommonActions;
 import com.pages.FlipkartPage;
@@ -48,7 +48,7 @@ public class FlipkartCartStepDefinition extends CommonActions{
 	@Then("the product should be removed from the cart")
 	public void the_product_should_be_removed_from_the_cart() throws InterruptedException {
 		Thread.sleep(8000);
-	    Assert.assertTrue(locator.missingCartItem.isDisplayed(), "Missing Cart Item not displayed");
+	    Assert.assertTrue(locator.missingCartItem.isDisplayed());
 	    System.out.println("Product successfully removed from the cart");
 
 	}

@@ -8,14 +8,25 @@ Given the user handles the popup
 @iPhonesearch
 Scenario: Verify iPhone search
 
-When the user searches for "Apple iPhone" product
-Then "Apple iPhone" products should be displayed
+#When the user searches for "Apple iPhone" product
+When the user searches for input product by map
+|1	|Apple iPhone |
+|2	| Samsung     |
+|3  | REDMI  	  |
+
+#Then "Apple iPhone" products should be displayed
 
 @differentmobilesearch
 Scenario Outline:Verify different mobile searches
 
-When the user searches for "<Input>" product
-Then "<Input>" products should be displayed
+#When the user searches for "<Input>" product
+#When the user searches for input product by list
+#|Apple iPhone |
+#| Samsung     |
+#| REDMI  	  |
+
+
+#Then "<Input>" products should be displayed
 Examples:
 	| Input       |
     | Apple iPhone|

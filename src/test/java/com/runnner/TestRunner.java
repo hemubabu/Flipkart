@@ -18,7 +18,6 @@ import io.cucumber.junit.CucumberOptions;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 		},
 		monochrome=true,
-//		tags="@validatemobile  and @validation",
 		dryRun=false
 		
 		)

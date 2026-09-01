@@ -3,8 +3,6 @@
   <groupId>CucumberProject</groupId>
   <artifactId>CucumberProject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
- 
-
 <dependencies>
 	<dependency>
 	    <groupId>io.cucumber</groupId>
@@ -24,44 +22,30 @@
 	    <version>7.20.1</version>
 	    <scope>test</scope>
 	</dependency>
-	
-	<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.11.0</version>
-    <scope>test</scope>
-	</dependency>
-	        
 	    <dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.27.0</version>
 	   </dependency>  
-   
      <dependency>
 	        <groupId>org.apache.poi</groupId>
 	        <artifactId>poi-ooxml</artifactId>
 	        <version>5.2.5</version>
 	   </dependency>
-
 	<dependency>
 	    <groupId>commons-io</groupId>
 	    <artifactId>commons-io</artifactId>
 	    <version>2.15.1</version>
 	</dependency>
-	
 	<dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
     <version>6.3.3</version>
 	</dependency>
-	
 	<dependency>
     <groupId>tech.grasshopper</groupId>
     <artifactId>extentreports-cucumber7-adapter</artifactId>
     <version>1.14.0</version>
 </dependency>
-
-      
   </dependencies>
 </project>

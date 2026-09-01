@@ -1,16 +1,15 @@
 package com.flipkartstepdefinition;
 
 import java.util.List;
+import java.util.Map;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+import org.junit.Assert;
 
 import com.baseclass.CommonActions;
 import com.pages.FlipkartPage;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -51,9 +50,28 @@ public class MobileSearchStepDefinition extends CommonActions{
 	  
 	}
 	
+	@When("the user searches for input product by list")
+	public void the_user_searches_for_input_product_by_list(DataTable datasList) {
+		
+		List<String> mobileNames = datasList.asList();
+		
+		enterTextAndPressEnter(locator.searchbox, mobileNames.get(0));
+	  
+	}
+	
+	@When("the user searches for input product by map")
+	public void the_user_searches_for_input_product_by_map(DataTable datasMap) {
+		
+		
+		Map<String,String> mobileNames = datasMap.asMap(String.class,String.class);
+		
+		enterTextAndPressEnter(locator.searchbox, mobileNames.get("2"));
+	  
+	}
+	
 	@Then("the {string} product should be validated")
 	public void the_product_should_be_validated(String output) {
-		Assert.assertEquals(validateProduct(output), output,"Expected product was not displayed");
+		Assert.assertEquals(validateProduct(output), output);
 		System.out.println( output+"Search Validation Passed");
     
     	
