@@ -6,6 +6,7 @@ public class NewJavaFile {
 
 			System.out.println("Code updated from master branch ");
 
+
 	}
 
 }
